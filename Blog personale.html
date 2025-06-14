@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <title>Il gabbiano d'Oriente</title>
+    <!-- Favicon con immagine di un volatile -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/616/616408.png" type="image/png" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <style>
+        a {
+            font-family: 'Pacifico', cursive; 
+            color: black; 
+            text-decoration: none; 
+        }
+        a:hover {
+            text-decoration: underline; 
+        }
+        td {
+            position: relative;
+            background: linear-gradient(to bottom, #00bfff, #99f6ff);
+            font-family: 'Pacifico', cursive;
+            padding: 10px;
+        }
+        /* Overlay semi-trasparente per opacizzare lo sfondo delle celle */
+        td::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(255, 255, 255, 0.3);
+            pointer-events: none;
+        }
+        td span {
+            font-style: italic;
+            font-family: 'Pacifico', cursive;
+            position: relative;
+        }
+        /* Bordo blu alla tabella e alle sezioni */
+        table {
+            border: 4px solid blue;
+            border-collapse: collapse;
+        }
+        div.section {
+            border: 4px solid blue;
+        }
+        /* Colorare di blu i titoli specifici */
+        h2.blu-title {
+            color: blue;
+        }
+        h3.blu-title {
+            color: blue;
+        }
+    </style>
+</head>
+<body background="https://st.depositphotos.com/1826082/3774/v/450/depositphotos_37749415-stock-illustration-seagulls.jpg">
+    <center>
+        <table border="4" width="50%" height="50">
+            <tr>
+                <td>
+                    <center>
+                        <a href="https://www.tiktok.com/@eliasrkibi3?_t=ZN-8xAbGKUFp3e&_r=1"><span>TIK TOK</span></a>
+                    </center>
+                </td>
+                <td>
+                    <center>
+                        <a href="https://youtube.com/@eliasrkibi6227?feature=shared"><span>YOUTUBE</span></a>
+                    </center>
+                </td>
+                <td>
+                    <center>
+                        <a href="mailto:elias.rkibi@gmail.com"><span>MAIL</span></a>
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </center>
+    <br><br><br><br><br><br><br><br>
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh;">
+        <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 20px;">
+            <div class="section" style="background-color: rgb(255, 255, 255); padding: 20px; border-radius: 8px;">
+                <h2 class="blu-title" style="font-family: 'Pacifico', cursive;"><center>IL GABBIANO D'ORIENTE</center></h2>
+                <p style="font-family: 'Pacifico', cursive;">Benvenuto in questo BLOG alquanto esotico e particolare. Per qualsiasi dubbio, consigio e/o COLLABORAZIONE, contattami via mail.</p>
+            </div>
+        </div>
+        <div style="display: flex; gap: 20px;">
+            <div class="section" style="background-color: rgb(255, 255, 255); padding: 20px; border-radius: 8px; width: 200px; text-align: center;">
+                <h3 class="blu-title" style="font-family: 'Pacifico', cursive;">CHI SONO?</h3>
+                <p style="font-family: 'Pacifico', cursive;">Sono un baldo giovane che vuole bloggare e mostrare le sue capacita'/abilita' nel creare siti web</p>
+            </div>
+            <div class="section" style="background-color: rgb(255, 255, 255); padding: 20px; border-radius: 8px; width: 200px; text-align: center;">
+                <h3 class="blu-title" style="font-family: 'Pacifico', cursive;">ATTIVITA'</h3>
+                <p style="font-family: 'Pacifico', cursive;">Mi diverto a creare contenuti Utili ed interessanti</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
