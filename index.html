@@ -1,141 +1,179 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Il gabbiano d'Oriente</title>
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/616/616408.png" type="image/png" />
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/616/616408.png"
+      type="image/png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            background-image: url("https://st.depositphotos.com/1826082/3774/v/450/depositphotos_37749415-stock-illustration-seagulls.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            margin: 0;
-            padding: 20px;
-            box-sizing: border-box;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        a {
-            font-family: 'Pacifico', cursive;
-            color: black;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+      body {
+        background-image: url("https://st.depositphotos.com/1826082/3774/v/450/depositphotos_37749415-stock-illustration-seagulls.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      a {
+        font-family: "Pacifico", cursive;
+        color: black;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .link-bar {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        border: 4px solid blue;
+        width: 100%;
+        max-width: 600px;
+      }
+      .link-cell {
+        position: relative;
+        background: linear-gradient(to bottom, #00bfff, #99f6ff);
+        font-family: "Pacifico", cursive;
+        padding: 10px;
+        flex: 1;
+        text-align: center;
+      }
+      .link-cell::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.3);
+        pointer-events: none;
+      }
+      .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 800px;
+        margin-top: 50px;
+      }
+      .section {
+        border: 4px solid blue;
+        background-color: rgb(255, 255, 255);
+        padding: 20px;
+        border-radius: 8px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .section.info-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .info-box {
+        flex-basis: calc(50% - 10px);
+        text-align: center;
+        box-sizing: border-box;
+      }
+      .blu-title {
+        color: blue;
+        font-family: "Pacifico", cursive;
+        text-align: center;
+      }
+      p {
+        font-family: "Pacifico", cursive;
+        text-align: center;
+      }
+      .video-container {
+        max-width: 800px;
+        margin: 20px auto;
+      }
+      video {
+        border: 4px solid blue;
+        border-radius: 8px;
+        width: 100%;
+        height: auto;
+      }
+      @media (max-width: 600px) {
         .link-bar {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            border: 4px solid blue;
-            width: 100%;
-            max-width: 600px;
-        }
-        .link-cell {
-            position: relative;
-            background: linear-gradient(to bottom, #00bfff, #99f6ff);
-            font-family: 'Pacifico', cursive;
-            padding: 10px;
-            flex: 1;
-            text-align: center;
-        }
-        .link-cell::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.3);
-            pointer-events: none;
-        }
-        .content-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            width: 100%;
-            max-width: 800px;
-            margin-top: 50px;
-        }
-        .section {
-            border: 4px solid blue;
-            background-color: rgb(255, 255, 255);
-            padding: 20px;
-            border-radius: 8px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .section.info-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
+          flex-direction: column;
         }
         .info-box {
-            flex-basis: calc(50% - 10px);
-            text-align: center;
-            box-sizing: border-box;
+          flex-basis: 100%;
         }
-        .blu-title {
-            color: blue;
-            font-family: 'Pacifico', cursive;
-            text-align: center;
-        }
-        p {
-            font-family: 'Pacifico', cursive;
-            text-align: center;
-        }
-        @media (max-width: 600px) {
-            .link-bar {
-                flex-direction: column;
-            }
-            .info-box {
-                flex-basis: 100%;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="link-bar">
-        <div class="link-cell">
-            <a href="https://www.tiktok.com/@eliasrkibi3?_t=ZN-8xAbGKUFp3e&_r=1"><span>TIK TOK</span></a>
-        </div>
-        <div class="link-cell">
-            <a href="https://www.instagram.com/rkibielias?igsh=MXRxam9iOTVmdDEweQ=="><span>INSTAGRAM</span></a>
-        </div>
-        <div class="link-cell">
-            <a href="https://youtube.com/@eliasrkibi6227?feature=shared"><span>YOUTUBE</span></a>
-        </div>
-        <div class="link-cell">
-            <a href="https://www.vinted.com/member/70725801-elias74714"><span>VINTED</span></a>
-        </div>
-        <div class="link-cell">
-            <a href="mailto:elias.rkibi@gmail.com"><span>MAIL</span></a>
-        </div>
+      <div class="link-cell">
+        <a href="https://www.tiktok.com/@eliasrkibi3?_t=ZN-8xAbGKUFp3e&_r=1"
+          ><span>TIK TOK</span></a
+        >
+      </div>
+      <div class="link-cell">
+        <a href="https://www.instagram.com/rkibielias?igsh=MXRxam9iOTVmdDEweQ=="
+          ><span>INSTAGRAM</span></a
+        >
+      </div>
+      <div class="link-cell">
+        <a href="https://youtube.com/@eliasrkibi6227?feature=shared"
+          ><span>YOUTUBE</span></a
+        >
+      </div>
+      <div class="link-cell">
+        <a href="https://www.vinted.com/member/70725801-elias74714"
+          ><span>VINTED</span></a
+        >
+      </div>
+      <div class="link-cell">
+        <a href="mailto:elias.rkibi@gmail.com"><span>MAIL</span></a>
+      </div>
     </div>
-    
+
     <div class="content-wrapper">
-        <div class="section">
-            <h2 class="blu-title">IL GABBIANO D'ORIENTE</h2>
-            <p>Benvenuto in questo BLOG alquanto esotico e particolare. Per qualsiasi dubbio, consiglio e/o COLLABORAZIONE, contattami via mail.</p>
+      <div class="section">
+        <h2 class="blu-title">IL GABBIANO D'ORIENTE</h2>
+        <p>
+          Benvenuto in questo BLOG alquanto esotico e particolare. Per
+          qualsiasi dubbio, consiglio e/o COLLABORAZIONE, contattami via mail.
+        </p>
+      </div>
+      <div class="section info-container">
+        <div class="info-box section">
+          <h3 class="blu-title">CHI SONO?</h3>
+          <p>
+            Sono un baldo giovane che vuole bloggare e mostrare le sue
+            capacità/abilità nel creare siti web
+          </p>
         </div>
-        <div class="section info-container">
-            <div class="info-box section">
-                <h3 class="blu-title">CHI SONO?</h3>
-                <p>Sono un baldo giovane che vuole bloggare e mostrare le sue capacità/abilità nel creare siti web</p>
-            </div>
-            <div class="info-box section">
-                <h3 class="blu-title">ATTIVITÀ</h3>
-                <p>Mi diverto a creare contenuti utili ed interessanti</p>
-            </div>
+        <div class="info-box section">
+          <h3 class="blu-title">ATTIVITÀ</h3>
+          <p>Mi diverto a creare contenuti utili ed interessanti</p>
         </div>
+      </div>
+
+      <div class="section video-container">
+        <video width="100%" autoplay loop muted>
+          <source src="gabbiano.mp4" type="video/mp4" />
+          Il tuo browser non supporta il tag video.
+        </video>
+      </div>
     </div>
-</body>
+  </body>
 </html>
