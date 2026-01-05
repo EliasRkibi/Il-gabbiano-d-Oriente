@@ -64,7 +64,7 @@
       border: 4px solid var(--primary-color);
       border-radius: 8px;
       width: 100%;
-      max-width: 600px;
+      max-width: 850px; /* Allargata per ospitare tutti i tasti */
       margin-bottom: 20px;
       overflow: hidden;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -76,7 +76,7 @@
       padding: 12px 8px;
       flex: 1;
       text-align: center;
-      min-width: 100px;
+      min-width: 120px; /* Garantisce spazio per il testo */
       transition: all 0.3s ease;
     }
     
@@ -170,13 +170,6 @@
       font-size: 1.2rem;
     }
 
-    /* Media query per schermi più grandi */
-    @media (min-width: 601px) {
-      .video-container {
-        max-width: 500px;
-      }
-    }
-    
     /* Media query per cellulari/schermi piccoli */
     @media (max-width: 600px) {
       .link-bar {
@@ -197,34 +190,39 @@
   <div class="main-page-wrapper">
     <div class="link-bar">
       <div class="link-cell">
-        <a
-          href="https://www.instagram.com/rkibielias?igsh=MXRxam9iOTVmdDEweQ=="
-          aria-label="Visita il mio profilo Instagram"
-          ><span>INSTAGRAM</span></a
-        >
+        <a href="Viaggi.html" aria-label="Visualizza i paesi visitati">
+          <span>PAESI VISITATI</span>
+        </a>
       </div>
+
       <div class="link-cell">
-        <a href="https://youtube.com/@eliasrkibi6227?feature=shared"
-          aria-label="Visita il mio canale YouTube"
-          ><span>YOUTUBE</span></a
-        >
+        <a href="https://www.instagram.com/rkibielias?igsh=MXRxam9iOTVmdDEweQ==" target="_blank" aria-label="Visita il mio profilo Instagram">
+          <span>INSTAGRAM</span>
+        </a>
       </div>
+      
       <div class="link-cell">
-        <a href="https://www.vinted.com/member/70725801-elias74714"
-          aria-label="Visita il mio profilo Vinted"
-          ><span>VINTED</span></a
-        >
+        <a href="https://youtube.com/@eliasrkibi6227?feature=shared" target="_blank" aria-label="Visita il mio canale YouTube">
+          <span>YOUTUBE</span>
+        </a>
       </div>
+      
       <div class="link-cell">
-        <a href="mailto:elias.rkibi@gmail.com" aria-label="Inviami una email"
-          ><span>MAIL</span></a
-        >
+        <a href="https://www.vinted.com/member/70725801-elias74714" target="_blank" aria-label="Visita il mio profilo Vinted">
+          <span>VINTED</span>
+        </a>
       </div>
+      
       <div class="link-cell">
-        <a href="https://wa.me/393454820685" target="_blank"
-          aria-label="Contattami su WhatsApp"
-          ><span>WHATSAPP/CELL.</span></a
-        >
+        <a href="mailto:elias.rkibi@gmail.com" aria-label="Inviami una email">
+          <span>MAIL</span>
+        </a>
+      </div>
+      
+      <div class="link-cell">
+        <a href="https://wa.me/393454820685" target="_blank" aria-label="Contattami su WhatsApp">
+          <span>WHATSAPP/CELL.</span>
+        </a>
       </div>
     </div>
 
@@ -236,6 +234,7 @@
           qualsiasi dubbio, consiglio e/o COLLABORAZIONE, contattami via mail.
         </p>
       </div>
+      
       <div class="section info-container">
         <div class="info-box section">
           <h2 class="blu-title">CHI SONO?</h2>
@@ -254,7 +253,6 @@
         <video width="100%" autoplay loop muted playsinline>
           <source src="gabbiano.mp4" type="video/mp4" />
           <source src="gabbiano.webm" type="video/webm" />
-          <!-- Messaggio di fallback se il video non viene caricato -->
           <div class="video-placeholder">
             Video del gabbiano non disponibile
           </div>
@@ -264,3 +262,4 @@
   </div>
 </body>
 </html>
+
