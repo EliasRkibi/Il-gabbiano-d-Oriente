@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Blog personale di Elias - Il gabbiano d'Oriente. Condivido le mie capacità e abilità nel creare siti web.">
-  <title>Il gabbiano d'Oriente - Elias Rkibi</title>
+  
+  <!-- Ottimizzazione SEO base -->
+  <meta name="description" content="Blog personale di Elias Rkibi - Il gabbiano d'Oriente. Condivido le mie capacità e abilità nel creare siti web e le mie passioni.">
+  <meta name="author" content="Elias Rkibi">
+  <meta name="keywords" content="Elias Rkibi, Il gabbiano d'Oriente, blog personale, creazione siti web, portfolio">
+  <title>Il gabbiano d'Oriente - Blog personale di Elias Rkibi</title>
+  
+  <!-- Open Graph per Social e migliore indicizzazione -->
+  <meta property="og:title" content="Il gabbiano d'Oriente - Elias Rkibi">
+  <meta property="og:description" content="Il blog personale e portfolio di Elias Rkibi. Scopri le mie abilità nel creare siti web, i miei viaggi e le mie attività.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://eliasrkibi.github.io/Il-gabbiano-d-Oriente/">
+
   <link
     rel="icon"
     href="https://png.pngtree.com/png-vector/20220121/ourmid/pngtree-flying-seagull-png-image_4358106.png"
@@ -14,6 +25,22 @@
     href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
     rel="stylesheet"
   />
+
+  <!-- Dati Strutturati JSON-LD (Fondamentale per farti trovare col tuo nome) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Elias Rkibi",
+    "url": "https://eliasrkibi.github.io/Il-gabbiano-d-Oriente/",
+    "jobTitle": "Web Developer & Content Creator",
+    "sameAs": [
+      "https://youtube.com/@eliasrkibi6227",
+      "https://www.vinted.com/member/70725801-elias74714"
+    ]
+  }
+  </script>
+
   <style>
     :root {
       --primary-color: #0066cc;
@@ -34,6 +61,252 @@
       font-family: "Pacifico", cursive;
       color: var(--text-color);
       line-height: 1.6;
+    }
+
+    .main-page-wrapper {
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+      transform: translateY(-2px);
+    }
+    
+    .link-bar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      border: 4px solid var(--primary-color);
+      border-radius: 8px;
+      width: 100%;
+      max-width: 850px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .link-cell {
+      position: relative;
+      background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+      padding: 12px 8px;
+      flex: 1;
+      text-align: center;
+      min-width: 120px;
+      transition: all 0.3s ease;
+    }
+    
+    .link-cell:hover {
+      background: linear-gradient(to bottom, #0055aa, #88e6f0);
+    }
+    
+    .link-cell::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.3);
+      pointer-events: none;
+    }
+    
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      max-width: 800px;
+    }
+    
+    .section {
+      border: 4px solid var(--primary-color);
+      border-radius: 8px;
+      width: 100%;
+      box-sizing: border-box;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .section-content {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+    }
+    
+    .section.info-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+    }
+    
+    .info-box.section {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      flex-basis: calc(50% - 10px);
+      text-align: center;
+      border: 4px solid var(--primary-color);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .blu-title {
+      color: var(--primary-color);
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #555;
+      text-align: center;
+      margin-top: -10px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    .video-container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+    }
+    
+    video {
+      border: 4px solid var(--primary-color);
+      border-radius: 8px;
+      width: 100%;
+      height: auto;
+      display: block;
+      background-color: #000;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .video-placeholder {
+      border: 4px solid var(--primary-color);
+      border-radius: 8px;
+      width: 100%;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f0f8ff;
+      color: var(--primary-color);
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 600px) {
+      .link-bar {
+        flex-direction: column;
+      }
+      
+      .info-box.section {
+        flex-basis: 100%;
+      }
+      
+      .link-cell {
+        min-width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-page-wrapper">
+    <div class="link-bar">
+      
+      <div class="link-cell">
+        <a href="CV_Rkibi Elias.pdf" target="_blank" aria-label="Visualizza il CV di Elias Rkibi">
+          <span>IL MIO CV</span>
+        </a>
+      </div>
+
+      <div class="link-cell">
+        <a href="Viaggi.html" aria-label="Visualizza i paesi visitati">
+          <span>PAESI VISITATI</span>
+        </a>
+      </div>
+      
+      <div class="link-cell">
+        <a href="https://youtube.com/@eliasrkibi6227?feature=shared" target="_blank" aria-label="Visita il canale YouTube di Elias Rkibi">
+          <span>YOUTUBE</span>
+        </a>
+      </div>
+      
+      <div class="link-cell">
+        <a href="https://www.vinted.com/member/70725801-elias74714" target="_blank" aria-label="Visita il profilo Vinted di Elias Rkibi">
+          <span>VINTED</span>
+        </a>
+      </div>
+      
+      <div class="link-cell">
+        <a href="mailto:elias.rkibi@gmail.com" aria-label="Invia una email a Elias">
+          <span>MAIL</span>
+        </a>
+      </div>
+      
+      <div class="link-cell">
+        <a href="https://wa.me/393454820685" target="_blank" aria-label="Contatta Elias su WhatsApp">
+          <span>WHATSAPP/CELL.</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="section section-content">
+        <h1 class="blu-title">IL GABBIANO D'ORIENTE</h1>
+        <div class="subtitle">Blog di Elias Rkibi</div>
+        <p>
+          Benvenuto in questo BLOG alquanto esotico e particolare. Per
+          qualsiasi dubbio, consiglio e/o COLLABORAZIONE, contattami via mail.
+        </p>
+      </div>
+      
+      <div class="section info-container">
+        <div class="info-box section">
+          <h2 class="blu-title">CHI È ELIAS RKIBI?</h2>
+          <p>
+            Mi chiamo Elias Rkibi e sono un baldo giovane che vuole bloggare e mostrare le sue
+            capacità/abilità nel creare siti web.
+          </p>
+        </div>
+        <div class="info-box section">
+          <h2 class="blu-title">ATTIVITÀ</h2>
+          <p>Mi diverto a creare contenuti utili ed interessanti sul web.</p>
+        </div>
+      </div>
+
+      <div class="section video-container">
+        <video width="100%" autoplay loop muted playsinline aria-label="Video di presentazione">
+          <source src="gabbiano.mp4" type="video/mp4" />
+          <source src="gabbiano.webm" type="video/webm" />
+          <div class="video-placeholder">
+            Video del gabbiano non disponibile
+          </div>
+        </video>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
     }
 
     .main-page-wrapper {
